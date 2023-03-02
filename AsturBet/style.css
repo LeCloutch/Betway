@@ -84,6 +84,14 @@ a{
     align-items: center;
     gap: 600px;
 }
+.s1bot a{
+    color: #bbb8b8;
+    font-size: 13px;
+    display: inline-block;
+}
+.s1bot a:hover{
+    color: #2f2f8d;
+}
 .s1Left{
     display: flex;
     flex-direction: column;
