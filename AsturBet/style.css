@@ -134,6 +134,18 @@ a{
 .s11bot h2{
     text-decoration: underline;
 }
+
+.s11bot a{
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 10px;
+    background: #000;
+    margin: 10px 0;
+    display: inline-block;
+}
+.s11bot a:hover{
+    background-color: #2f2f8d;
+}
 #deco1{
     height: 20px;
     background-color: rgb(223, 203, 250);
@@ -192,7 +204,52 @@ a{
     align-items: center;
 }
 .footerLeft img{
-    width: 60px;
+    width: 200px;
     height: 60px;
+}
+@media all and (max-width: 1002px){
+    
+    #hero{
+        flex-direction: column;
+        height: auto;
+    }
+    #seccion1{
+        flex-direction:column;
+    }
+    #seccion11{
+        flex-direction:column;
+    }
+    #seccion2{
+        flex-direction:column;
+    }
+    #seccion3{
+        flex-direction:column;
+    }
+    
+   
+}
+@media all and (max-width: 762px){
+    #s1top{
+        flex-direction: column;
+
+    }
+    #s2top{
+        flex-direction: column;
+
+    }
+    #s3top{
+        flex-direction: column;
+
+    }
+}
+@media all and (max-width: 650px){
+    .off{display: none;}
+    .nav a{font-size: 20px;}
+}
+
+@media all and (max-width: 400px){
+    #footer{
+        flex-direction: column;
+    }
 }
 
