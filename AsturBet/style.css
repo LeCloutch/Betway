@@ -4,10 +4,17 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    
 }
-a{
-
+body{
+    
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#margen-interno{
+    padding: 0 200px;
 }
 #header{
     display: flex;
@@ -15,9 +22,12 @@ a{
     justify-content: space-between;
     align-items: center;
     background-color: black;
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    width: 100%;
     padding: 20px;
     font: white;
-    position: sticky;
     top: 0;
 }
 .headerRight img{
@@ -30,12 +40,11 @@ a{
     list-style: none;
     color: white;
     text-transform: uppercase;
-    gap: 40px;
     padding-right: 20px;
 }
 #hero{
     width: 100%;
-    height: 700px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -51,7 +60,7 @@ a{
     flex-direction: column;
     text-transform: uppercase;
     padding-left: 40px;
-    gap:40px;
+    
 }
 .texy2{
     display: flex;
@@ -60,12 +69,12 @@ a{
     align-self: flex-end;
 }
 .texy2 img{
-    height: 650px;
+    min-height: 650px;
 }
 
 #seccion1{
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,7 +91,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 600px;
+    
 }
 .s1bot a{
     color: #bbb8b8;
@@ -90,14 +99,13 @@ a{
     display: inline-block;
 }
 .s1bot a:hover{
-    color: #2f2f8d;
+    color: rgb(223, 203, 250);
 }
 .s1Left{
     display: flex;
     flex-direction: column;
     justify-self: center;
     align-self: flex-start;
-    gap:20px;
     padding-top: 100px;
 }
 .s1Left h2{
@@ -109,31 +117,29 @@ a{
     flex-direction: column;
     justify-self: center;
     align-self:flex-end;
-    gap:20px;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 .s1Right h2{
     text-decoration: underline;
 }
 #seccion11{
     padding-top: 30px;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 .s11bot{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding-top: 40px;
-    gap: 40px;
+    overflow: hidden;
 }
 .s11bot img{
-    height: 230px;
+    min-height: 230px;
     width: 250px;
 }
 .s11top h1{
@@ -152,32 +158,36 @@ a{
     display: inline-block;
 }
 .s11bot a:hover{
-    background-color: #2f2f8d;
+    background-color: rgb(223, 203, 250);
 }
 #deco1{
-    height: 20px;
+    min-height: 20px;
     background-color: rgb(223, 203, 250);
 }
 #seccion2{
-    height: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding-top: 80px;
-    gap: 150px;
 }
 .s2Left h1{
     text-transform: uppercase;
 }
+.s2Right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #seccion3{
     padding-top: 30px;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     background-color: rgb(193, 243, 243); 
 }
 .s3Bot{
@@ -186,11 +196,10 @@ a{
     justify-content: center;
     align-items: center;
     padding-top: 40px;
-    gap: 40px;
     padding-bottom: 40px;
 }
 .s3Bot img{
-    height: 330px;
+    min-height: 330px;
     width: 250px;
 }
 .s3Bot h2{
@@ -201,25 +210,28 @@ a{
     text-align: center;
 }
 #deco2{
-    height: 20px;
+    min-height: 20px;
     background-color: rgb(223, 203, 250);
 }
 #footer{
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .footerLeft img{
     width: 200px;
-    height: 60px;
+    min-height: 60px;
 }
-@media all and (max-width: 1002px){
-    
+.footerRight img{
+    width: 100%;
+    min-height: 60px;
+}
+@media all and (max-width: 1440px){
     #hero{
         flex-direction: column;
-        height: auto;
+        min-height: auto;
     }
     #seccion1{
         flex-direction:column;
@@ -233,31 +245,53 @@ a{
     #seccion3{
         flex-direction:column;
     }
+    #footer{
+        display: flex;
+        justify-content: center;
+    }
+   
     
    
 }
-@media all and (max-width: 762px){
-    #s1top{
+@media all and (max-width: 834px){
+    .s1top{
         flex-direction: column;
-
     }
-    #s2top{
+    .s1bot{
         flex-direction: column;
-
     }
-    #s3top{
+    .s11top{
         flex-direction: column;
-
     }
+    .s11bot{
+        flex-direction: column;
+    }
+    .s2Left{
+        flex-direction: column;
+    }
+    .s2Right{
+        flex-direction: column;
+    }
+    .s3top{
+        flex-direction: column;
+    }
+    .s3Bot{
+        flex-direction: column;
+    }
+    
+    
 }
-@media all and (max-width: 650px){
-    .off{display: none;}
-    .nav a{font-size: 20px;}
-}
 
-@media all and (max-width: 400px){
+
+@media all and (max-width: 390px){
     #footer{
-        flex-direction: column;
+       flex-direction: column;
+    }
+    .footerLeft{
+         flex-direction: column;
+    }
+    .footerRight{
+         flex-direction: column;
     }
 }
 
